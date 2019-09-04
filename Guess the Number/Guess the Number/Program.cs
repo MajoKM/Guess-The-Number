@@ -20,26 +20,26 @@ namespace Guess_the_Number
             Console.WriteLine("By: Kieron Mead");
             Console.WriteLine("");
 
+            /*do
+            {*/
+            Console.WriteLine("Guess the number generated between 0 and 9!");
+            secretNumber = rand.Next(1, 10);
             do
             {
-                Console.WriteLine("Guess the number generated between 0 and 9!");
-                secretNumber = rand.Next(1, 10);
-                do
-                {
-                    guess = Convert.ToInt16(Console.ReadLine());
-                    guessNo++;
+              guess = Convert.ToInt16(Console.ReadLine());
+              guessNo++;
 
-                    if (guess < secretNumber)
-                        Console.WriteLine("Too Low");
-                    else if (guess > secretNumber)
-                        Console.WriteLine("Too High");
-                }
-                while (guess != secretNumber);
-
-                Console.WriteLine("\nCorrect!  Guesses:" + guessNo);
-
+              if (guess < secretNumber)
+                 Console.WriteLine("Too Low");
+              else if (guess > secretNumber)
+                  Console.WriteLine("Too High");
             }
-            
+            while (guess != secretNumber);
+
+            Console.WriteLine("\nCorrect!  Guesses:" + guessNo);
+            Console.ReadKey();
+            /*}
+            while ()*/
 
            
             //Console.WriteLine("The secret number is" + secretNumber);
